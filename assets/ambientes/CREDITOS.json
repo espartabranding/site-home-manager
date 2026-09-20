@@ -1,0 +1,129 @@
+[
+ {
+  "arquivo": "sala.jpg",
+  "rotulo": "Sala de estar",
+  "frase": "Filme, som ambiente, meia iluminação.",
+  "alt": "Sala de estar integrada ao jardim, com TV, cortinas e iluminação automatizadas",
+  "pontos": [
+   {
+    "rotulo": "Filme",
+    "x": 87,
+    "y": 29
+   },
+   {
+    "rotulo": "Som ambiente",
+    "x": 83,
+    "y": 42
+   },
+   {
+    "rotulo": "Iluminação",
+    "x": 66,
+    "y": 28
+   }
+  ],
+  "origem": "imagem gerada pelo cliente (ChatGPT), 20/09/2026"
+ },
+ {
+  "arquivo": "suite.jpg",
+  "rotulo": "Suíte master",
+  "frase": "Cortinas e luz acordam junto com você.",
+  "alt": "Suíte master com cortinas e iluminação de cena automatizadas",
+  "pontos": [
+   {
+    "rotulo": "Cortinas",
+    "x": 48,
+    "y": 30
+   },
+   {
+    "rotulo": "Luz de cabeceira",
+    "x": 74,
+    "y": 33
+   }
+  ],
+  "origem": "imagem gerada pelo cliente (ChatGPT), 20/09/2026"
+ },
+ {
+  "arquivo": "cozinha.jpg",
+  "rotulo": "Cozinha",
+  "frase": "Luz de bancada e cortinas em um toque.",
+  "alt": "Cozinha com ilha, iluminação de bancada e cortinas automatizadas",
+  "pontos": [
+   {
+    "rotulo": "Luz de bancada",
+    "x": 70,
+    "y": 40
+   },
+   {
+    "rotulo": "Cortinas",
+    "x": 39,
+    "y": 33
+   }
+  ],
+  "origem": "imagem gerada pelo cliente (ChatGPT), 20/09/2026"
+ },
+ {
+  "arquivo": "garagem.jpg",
+  "rotulo": "Garagem",
+  "frase": "Acesso liberado e luz acesa antes de você chegar.",
+  "alt": "Garagem com controle de acesso e iluminação automatizada",
+  "pontos": [
+   {
+    "rotulo": "Acesso",
+    "x": 52,
+    "y": 13
+   },
+   {
+    "rotulo": "Iluminação",
+    "x": 79,
+    "y": 24
+   }
+  ],
+  "origem": "imagem gerada pelo cliente (ChatGPT), 20/09/2026"
+ },
+ {
+  "arquivo": "quarto.jpg",
+  "rotulo": "Quarto",
+  "frase": "Luz e cortinas acompanham o dia de trabalho.",
+  "alt": "Quarto com estação de trabalho, cortinas e iluminação automatizadas",
+  "pontos": [
+   {
+    "rotulo": "Luz de mesa",
+    "x": 95,
+    "y": 41
+   },
+   {
+    "rotulo": "Cortinas",
+    "x": 15,
+    "y": 36
+   }
+  ],
+  "origem": "imagem gerada pelo cliente (ChatGPT), 20/09/2026"
+ },
+ {
+  "arquivo": "banho.jpg",
+  "rotulo": "Banheiro",
+  "frase": "Piso aquecido e luz suave no fim do dia.",
+  "alt": "Banheiro com banheira, piso aquecido e iluminação de cena",
+  "pontos": [
+   {
+    "rotulo": "Piso aquecido",
+    "x": 13,
+    "y": 72
+   },
+   {
+    "rotulo": "Luz de nicho",
+    "x": 57,
+    "y": 32
+   }
+  ],
+  "origem": "imagem gerada pelo cliente (ChatGPT), 20/09/2026"
+ },
+ {
+  "arquivo": "hero.jpg",
+  "rotulo": "Hero",
+  "titulo": "Interior luxury Buckhead condo",
+  "licenca": "cc0",
+  "provedor": "rawpixel",
+  "fonte": "https://www.rawpixel.com/image/6082588/interior-the-luxury-buckhead-condo"
+ }
+]

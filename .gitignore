@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Ferramenta local de conferência do responsivo — não faz parte do site
+preview-mobile.html
+
+# Material de origem que o site não referencia (12MB + 3,6MB).
+# Fica só na máquina; nada no site aponta para estas pastas.
+assets/legado/
+assets/cenas/
