@@ -100,7 +100,12 @@
   function onFrame() {
     ticking = false;
     var y = window.pageYOffset || document.documentElement.scrollTop;
-    var limite = hero ? hero.offsetHeight - 90 : 80;
+    /* No celular o texto do hero fica no pé da foto e passa por baixo do
+       cabeçalho, que é transparente ali -- o logotipo cavalgava a frase.
+       Numa tela estreita o fundo do cabeçalho entra bem antes. */
+    var estreito = window.innerWidth < 900;
+    var limite = hero ? (estreito ? Math.min(140, hero.offsetHeight * .18)
+                                  : hero.offsetHeight - 90) : 80;
     document.body.classList.toggle('hdr-light', y > limite);
   }
   function requestFrame() {

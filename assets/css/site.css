@@ -481,6 +481,16 @@ body.menu-open .drawer a:nth-child(4){ transition-delay:220ms; }
 /* ---- esferas: apontam na foto o que a frase menciona ---- */
 
 .palco__pins{ position:absolute; inset:0; z-index:2; pointer-events:none; }
+
+/* As esferas usam porcentagem da CAIXA, nao da imagem. Como o palco é
+   alto e estreito no celular, o object-fit:cover corta as laterais e
+   deixa aparecer só 25% da largura da foto a 390px (35% a 768px) --
+   então o ponto marcado como "Filme" deixa de cair sobre a TV e ainda
+   atropela a legenda no meio da tela. Só fazem sentido onde a caixa é
+   larga o bastante para mostrar a cena inteira. */
+@media (max-width:999px){
+  .palco__pins{ display:none; }
+}
 .pins{
   position:absolute; inset:0;
   visibility:hidden; opacity:0;
@@ -1240,10 +1250,10 @@ body.menu-open .drawer a:nth-child(4){ transition-delay:220ms; }
   .pillar__ico{ margin-inline:auto; }
   .pillars .pillar{
     grid-area:1/1;
-    opacity:0; visibility:hidden;
+    opacity:0; visibility:hidden; pointer-events:none;
     transition:opacity .55s var(--ease), visibility 0s linear .55s;
   }
-  .pillars .pillar.is-on{ opacity:1; visibility:visible; transition-delay:0s; }
+  .pillars .pillar.is-on{ opacity:1; visibility:visible; pointer-events:auto; transition-delay:0s; }
   .pillars__prog{ display:flex; }
 }
 @media (prefers-reduced-motion:reduce){
@@ -1346,10 +1356,10 @@ body.menu-open .drawer a:nth-child(4){ transition-delay:220ms; }
   .quote blockquote{ text-align:center; }
   .quotes .quote{
     grid-area:1/1;
-    opacity:0; visibility:hidden;
+    opacity:0; visibility:hidden; pointer-events:none;
     transition:opacity .55s var(--ease), visibility 0s linear .55s;
   }
-  .quotes .quote.is-on{ opacity:1; visibility:visible; transition-delay:0s; }
+  .quotes .quote.is-on{ opacity:1; visibility:visible; pointer-events:auto; transition-delay:0s; }
   .quotes .quote:hover{ transform:none; box-shadow:none; }
   .quotes__prog{ display:flex; }
 }
@@ -1409,9 +1419,13 @@ body.menu-open .drawer a:nth-child(4){ transition-delay:220ms; }
 .ftr p, .ftr a{ font-size:.85rem; font-weight:400; line-height:2; color:rgba(255,255,255,.7); }
 .ftr a{ transition:color .4s var(--ease); }
 .ftr a:hover{ color:#fff; }
-.ftr__social{ display:flex; gap:var(--s3); margin-top:var(--s4); }
-.ftr__social img{ width:32px; height:32px; opacity:.8; transition:opacity .4s var(--ease); }
-.ftr__social a:hover img{ opacity:1; }
+/* desenhados em vez de PNG: os arquivos antigos traziam o círculo azul
+   embutido na imagem, que nao dava para tirar por CSS */
+.ftr__social{ display:flex; gap:var(--s4); margin-top:var(--s5); }
+.ftr__social a{ display:grid; place-items:center; color:rgba(255,255,255,.66);
+                transition:color .4s var(--ease); }
+.ftr__social svg{ width:22px; height:22px; display:block; }
+.ftr__social a:hover{ color:#fff; }
 .ftr__base{
   display:flex; flex-wrap:wrap; gap:var(--s4); justify-content:space-between; align-items:center;
   padding-top:var(--s6); border-top:1px solid rgba(255,255,255,.14);
@@ -1447,8 +1461,11 @@ body.menu-open .drawer a:nth-child(4){ transition-delay:220ms; }
 .band--horizonte{ position:relative; }
 .band--horizonte::before{
   content:""; position:absolute; pointer-events:none;
-  left:-14%; right:-14%; bottom:100%;
-  height:var(--horizonte);
+  left:-14%; right:-14%;
+  /* 1px de sobreposicao: com bottom:100% puro a base do arco cai em pixel
+     fracionario e o fundo de baixo vaza como um fio claro na emenda */
+  bottom:calc(100% - 1px);
+  height:calc(var(--horizonte) + 1px);
   border-radius:50% 50% 0 0 / 100% 100% 0 0;
   /* claro sobre claro: só o fio do horizonte, que afina nas pontas */
   border-top:1px solid var(--line);
