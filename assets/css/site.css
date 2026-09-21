@@ -1417,6 +1417,13 @@ body.menu-open .drawer a:nth-child(4){ transition-delay:220ms; }
   color:rgba(255,255,255,.5); margin-bottom:var(--s4);
 }
 .ftr p, .ftr a{ font-size:.85rem; font-weight:400; line-height:2; color:rgba(255,255,255,.7); }
+.ftr__contato{ display:grid; gap:var(--s4); margin-top:var(--s5); }
+.ftr__contato p{ display:grid; gap:2px; line-height:1.6; overflow-wrap:anywhere; }
+.ftr__contato span{
+  font-size:.56rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(255,255,255,.5);
+}
+.ftr__contato a{ color:rgba(255,255,255,.86); }
 .ftr a{ transition:color .4s var(--ease); }
 .ftr a:hover{ color:#fff; }
 /* desenhados em vez de PNG: os arquivos antigos traziam o círculo azul
