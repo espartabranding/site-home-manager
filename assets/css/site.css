@@ -429,6 +429,17 @@ body.menu-open .drawer a:nth-child(4){ transition-delay:220ms; }
 
 .band--palco{ padding-bottom:0; }   /* o arco do palco ja faz a emenda */
 
+/* o texto de abertura mora na faixa clara entre o hero e a foto do palco.
+   Com o respiro cheio em cima e so a margem do shead embaixo, a frase
+   ficava jogada para baixo: aqui os dois lados sao o mesmo valor, entao
+   o bloco fica centrado na faixa (e a faixa encolhe junto). */
+#ambientes{ padding-top:clamp(44px,4.6vw,80px); }
+#ambientes .shead{ margin-bottom:clamp(44px,4.6vw,80px); }
+
+/* o cabecalho e fixo e cobre os primeiros 81px: sem esta folga o salto
+   do menu encosta o inicio da secao atras dele */
+section[id]{ scroll-margin-top:clamp(72px,8vw,96px); }
+
 .palco{
   position:relative; overflow:hidden; isolation:isolate;
   /* 20% mais alto que o hero. De quebra, nesta altura a caixa fica com
