@@ -1401,15 +1401,19 @@ body.menu-open .drawer a:nth-child(4){ transition-delay:220ms; }
 }
 .cta__way a:hover{ border-bottom-color:#fff; }
 
+/* a chamada final encosta no rodape e os dois sao o mesmo preto: com o
+   respiro cheio embaixo, a emenda virava um vazio alto demais */
+#contato{ padding-bottom:clamp(36px,3.4vw,56px); }
+
 /* ---------------------------------------------------------
    RODAPÉ
    --------------------------------------------------------- */
 
-.ftr{ background:var(--ink); color:var(--paper); padding-block:clamp(48px,5vw,84px) var(--s7); }
+.ftr{ background:var(--ink); color:var(--paper); padding-block:clamp(32px,3vw,52px) var(--s6); }
 .ftr__cols{
   display:grid; gap:clamp(28px,3vw,52px);
   grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-  margin-bottom:clamp(40px,4.4vw,72px);
+  margin-bottom:clamp(28px,2.8vw,44px);
 }
 .ftr__logo img{ height:78px; width:auto; margin-bottom:var(--s5); }
 .ftr h4{
@@ -1435,7 +1439,7 @@ body.menu-open .drawer a:nth-child(4){ transition-delay:220ms; }
 .ftr__social a:hover{ color:#fff; }
 .ftr__base{
   display:flex; flex-wrap:wrap; gap:var(--s4); justify-content:space-between; align-items:center;
-  padding-top:var(--s6); border-top:1px solid rgba(255,255,255,.14);
+  padding-top:var(--s5); border-top:1px solid rgba(255,255,255,.14);
 }
 .ftr__base p{
   font-size:.56rem; font-weight:500; letter-spacing:.14em;
