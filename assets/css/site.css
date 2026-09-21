@@ -842,13 +842,7 @@ section[id]{ scroll-margin-top:clamp(72px,8vw,96px); }
   position:relative; z-index:5;
   height:clamp(300px, 32vw, 480px);
   display:grid; place-items:center;
-  /* a flutuacao mora aqui: se ficasse na imagem, a animacao sobrescreveria
-     o transform e o fator de escala --k nunca seria aplicado */
-  animation:flutua 7s ease-in-out infinite;
 }
-/* os renders 3D tem proporcoes variadas (retrato e paisagem): precisa
-   limitar altura tambem, senao um retrato estoura o palco */
-@keyframes flutua{ 0%,100%{ transform:translateY(-6px) } 50%{ transform:translateY(6px) } }
 /* os renders 3D tem proporcoes variadas (retrato e paisagem): limita
    largura E altura, senao um retrato estoura o palco */
 .heroprod img{
