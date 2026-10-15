@@ -16,3 +16,12 @@ preview-mobile.html
 # Fica só na máquina; nada no site aponta para estas pastas.
 assets/legado/
 assets/cenas/
+
+# Segredos — nunca versionar
+.env
+.env.*
+!.env.example
+!.env.exemplo
+*.pem
+*.key
+credentials.json
